@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+ 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Form</title>
+  <style type="text/css">fieldset { border-radius: 20px; }
+  body{background-size:cover }
+  strong{
+    color: purple;
+    font-size: 31px;
+    font-weight: bold;
+    }
+  #p1{
+       color :red ;
+      
+        }
+#p2{
+color :rgb(136, 255, 0) ;
+      
+        }  
+ #p3{
+color :rgb(255, 238, 0) ;
+      
+        }                  
+textarea {
+    color:rgb(0, 102, 255) ;
+    background-color:lightblue
+} 
+input{
+    background-color:rgb(173, 186, 230)
+} 
+.me a{
+        text-decoration: none;
+        padding: 10px 20px 10px 20px;
+        line-height: 1.2em;
+        color:yellowgreen;
+        display: block;
+      }
+      #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(140, 0, 255);
+  color: red;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: blue;
+}
+  
+  </style>
+
+<script type="text/javascript">
+  function checkFields() {
+ if (document.getElementById('bName').value=="") {
+  alert("username can not empty; please enter a username");
+  document.getElementById('bName').focus();
+  return false;
+
+ }
+ else if (document.getElementById('bEmail').value==""){
+     alert("please does not empty,check again!!")
+      document.getElementById('bEmail').focus();
+  return false;
+ }
+ else
+ return true; 
+ var formname =document.f1.name.value
+   alert('Your name is' +formname)
+
+   
+
+   var formurl =document.f1.email.value
+   alert('Your website address is' +formurl)
+}
+</script>
+
+
+  </head>
+  <body background="star.jpg">
+    Happy:
+  <img src="star2.jpg" alt="happy">
+  
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  
+  <div class="me">
+    <a href="home.html">home
+    </a>
+
+  <h2> <strong>Application Form</strong></h2>
+  <form  method="post " enctype="multipart/form-data" onSubmit="return checkFields()" name="f1">
+  <p id="p1"> Name : <input type="text" name="name" size="8" id="bName" pattern="[A-Z][A-Za-z]*" required="required" /><br />
+  Birth: <input type="date" size="4" maxlength="9" name="orderdate" /><br />
+  Email : <input type="email"  name="email" id="bEmail"/><br />
+  Gender : 
+  <input list="Gender" size="4"/>
+  <datalist id="Gender">
+    <option value="Male"/ >
+    <option value="Female" />
+    <option value="other" />
+  </datalist><br />
+  lerning experience: 
+   <input type="radio"  value="L" name="size"/>Large
+   <input type="radio"  value="M" name="size" checked="checked"/>Medium
+   <input type="radio"  value="S" name="size" />Small
+  <br><br /></p>
+
+  
+  
+
+ 
+
+  <fieldset >
+  <legend size="8" ><strong>Reason for Join us</strong></legend>
+  
+  <textarea rows="5" cols="30" name="words">In less than 10 words... </textarea>
+  <br />
+  
+  </fieldset>
+  <br />
+
+ 
+  <p id="p3">favorite zodiac signs :
+  <select>
+    <optgroup label= "Fire">
+      <option value="A" >Aries</option>
+      <option value="B">Leo</option>
+      <option value="F">Sagittarius</option> 
+    </optgroup>
+    <optgroup label="Wind">
+      <option value="T">Gemini</option>
+      <option value="C">Libra</option>
+      <option value="C">Aquarius</option>
+    </optgroup>
+    <optgroup label= "Earth">
+        <option value="S" >Taurus</option>
+        <option value="B">Capricorn</option>
+        <option value="F">Virgo</option>
+    <optgroup label= "Water">
+            <option value="S" >Scorpio</option>
+            <option value="B">Cancer</option>
+            <option value="F">Pisces</option>   
+    </p>
+  </select>
+  <br /><br />
+  <p id="p2"> 
+    If you are interested in joining us, you are welcome to write your inquiry in the application form.</p>
+<br><br />
+  <button type="submit">Join Now</button>
+
+  <input type="reset" value="Reset Form" />
+
+  </form>
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+</body>
+</html>
+
